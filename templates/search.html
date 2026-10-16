@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Поиск</h1>
+<div class="card">
+    <form method="get">
+        <input type="text" name="q" placeholder="Введите запрос..." value="{{ query }}">
+        <button type="submit">Найти</button>
+    </form>
+</div>
+{% if query %}
+<div class="card">
+    <h3>Результаты по запросу:</h3>
+    <p>Вы искали: {{ query }}</p>
+    <p>Найдено: 0 результатов.</p>
+</div>
+{% endif %}
+{% endblock %}

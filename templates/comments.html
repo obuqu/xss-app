@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Комментарии</h1>
+<div class="card">
+    <form method="post">
+        <input type="text" name="author" placeholder="Ваше имя">
+        <textarea name="text" placeholder="Комментарий..." rows="3"></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<h2>Все комментарии ({{ comments|length }})</h2>
+{% for c in comments %}
+<div class="card">
+    <strong>{{ c[1] }}</strong>
+     <p>{{ c[2] }}</p>
+</div>
+{% endfor %}
+{% endblock %}

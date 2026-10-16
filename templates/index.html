@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>VulnShop — учебное приложение</h1>
+<div class="card">
+    <h2>Добро пожаловать!</h2>
+    <p>Это учебное приложение для демонстрации XSS-уязвимостей.</p>
+    <ul>
+        <li><a href="/search">Поиск</a> — уязвим к Reflected XSS</li>
+        <li><a href="/comments">Комментарии</a> — уязвимы к Stored XSS</li>
+    </ul>
+</div>
+{% endblock %}
